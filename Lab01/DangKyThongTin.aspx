@@ -75,7 +75,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" class="auto-style2">KẾT QUẢ ĐĂNG KÝ</td>
+                <td colspan="2" class="text-center h3 alert alert-info">KẾT QUẢ ĐĂNG KÝ</td>
             </tr>
             <tr>
                 <td colspan="2" class="auto-style1">
