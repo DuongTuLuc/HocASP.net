@@ -62,12 +62,14 @@
                 <asp:Button ID="btIndonDatHang" runat="server" Text="In đơn đặt hàng" CssClass="btn btn-primary text-center" OnClick="btIndonDatHang_Click" />
             </td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
+       <tr>
+          <td colspan="2"> 
+              <asp:Label ID="lbHoadon" runat="server" ForeColor="#CC3300"></asp:Label>
+          </td>
+       </tr>
     </table>
                </div>
+         <div class="container w-50">&nbsp;</div>
     </form>
 </body>
 </html>
