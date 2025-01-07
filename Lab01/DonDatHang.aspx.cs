@@ -32,9 +32,24 @@ namespace Lab01
             {
                 string tenbanh = ddlBanh.SelectedItem.Text;
                 int soluong = int.Parse(txtSoLuong.Text);
-                string kq = string.Format("{0},({1}))", tenbanh, soluong);
-                lstBanh.Items.Add(kq);
-                lbLoi.Text = "";
+                // Kiem tra ton tai trong lstDanhSach
+                bool find = false;
+                foreach (ListItem item in lstBanh.Items)
+                {
+                    if (item.Text.StartsWith(tenbanh))
+                    {
+                        find = true;
+                        // Cập nhật số lượng
+                        string[] data = item.Text.Split(new char[] { '(', ')' });
+                        soluong += int.Parse(data[1]);
+                        item.Text = $"{tenbanh} ({soluong})";
+                    }
+                }
+                if (!find)
+                {
+                    string kq = string.Format("{0} ({1})", tenbanh, soluong);
+                    lstBanh.Items.Add(kq);
+                }
             }
             catch (Exception ex)
             {
