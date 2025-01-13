@@ -77,7 +77,7 @@ namespace Lab01
             //Thu nhập thông tin tử client
             kq += string.Format("Khách hàng: <b> {0} </b> <br>", txtHoTen.Text);
             kq += string.Format("Địa chỉ: <b> {0} </b> <br>", txtDiaChi.Text);
-            kq += string.Format("Khách hàng: <b> {0} </b> <br>", txtMST.Text);
+            kq += string.Format("Mã số thuế: <b> {0} </b> <br>", txtMST.Text);
 
             kq += "<b> Đặt các loại bánh sau: </b>";
 
