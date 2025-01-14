@@ -9,19 +9,18 @@
         .auto-style1 {
             width: 100%;
         }
-        .auto-style3 {}
         .auto-style4 {
             width: 174px;
         }
         .auto-style5 {
-            width: 285px;
+            width: 308px;
         }
         .auto-style6 {
             width: 174px;
             height: 31px;
         }
         .auto-style7 {
-            width: 285px;
+            width: 308px;
             height: 31px;
         }
     </style>
@@ -45,7 +44,8 @@
                 <td class="auto-style7">
                     
                     <asp:TextBox ID="txtTenDN" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvTenDN" runat="server"  ControlToValidate="txtTenDN" ErrorMessage="Tên đăng nhập không được bỏ trống" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvTenDN" runat="server"  ControlToValidate="txtTenDN" ErrorMessage="Tên đăng nhập không được bỏ trống" ForeColor="#FF3300" Display="Dynamic">(*)</asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="revTenDN" runat="server" ControlToValidate="txtTenDN" ErrorMessage="Tên đăng nhập không hợp lệ" ForeColor="#FF3300" Display="Dynamic" ValidationExpression="[\d|\w|!|&amp;|_]{8}[\d|\w|!|&amp;|_]+">(*)</asp:RegularExpressionValidator>
                 </td>
                 <td style="vertical-align:top" rowspan="12">
                     <asp:Label ID="lbThongTin" runat="server"></asp:Label>
@@ -57,7 +57,7 @@
                 <td class="auto-style4">Mật khẩu</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtMatKhau" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ErrorMessage="Mật khẩu không được bỏ trống" ControlToValidate="txtMatKhau" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ErrorMessage="Mật khẩu không được bỏ trống" ControlToValidate="txtMatKhau" ForeColor="#FF3300" Display="Dynamic">(*)</asp:RequiredFieldValidator>
 
                 </td>
             </tr>
@@ -65,8 +65,8 @@
                 <td class="auto-style4">Nhập lại mật khẩu</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtMKNL" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvMKNL" runat="server" ErrorMessage="Chưa xác nhận mật khẩu" ControlToValidate="txtMKNL" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
-                     <asp:CompareValidator ID="cvMKNL" runat="server" ErrorMessage="Mật khẩu xác nhận không trùng" ControlToCompare="txtMatKhau" ControlToValidate="txtMKNL" >(*)</asp:CompareValidator>
+                    <asp:RequiredFieldValidator ID="rfvMKNL" runat="server" ErrorMessage="Chưa xác nhận mật khẩu" ControlToValidate="txtMKNL" ForeColor="#FF3300" Display="Dynamic">(*)</asp:RequiredFieldValidator>
+                     <asp:CompareValidator ID="cvMKNL" runat="server" ErrorMessage="Mật khẩu xác nhận không trùng" ControlToCompare="txtMatKhau" ControlToValidate="txtMKNL" ForeColor="#FF3300" Display="Dynamic">(*)</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -76,19 +76,23 @@
                 <td class="auto-style4">Họ tên khách hàng</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtHoTen" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Chưa nhập họ tên">(*)</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ControlToValidate="txtHoTen" ErrorMessage="Chưa nhập họ tên" ForeColor="#FF3300" Display="Dynamic">(*)</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">Ngày sinh</td>
                 <td class="auto-style5">
                   <div class="d-flex">
+                       
                         <asp:DropDownList ID="ddlNgay" runat="server" CssClass="form-select">
                     </asp:DropDownList>
+                       <asp:RequiredFieldValidator ID="rfvNgay" runat="server" ControlToValidate="ddlNgay" ErrorMessage="Chưa chọn ngày sinh" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
                     <asp:DropDownList ID="ddlThang" runat="server" CssClass="form-select">
                     </asp:DropDownList>
+                      <asp:RequiredFieldValidator ID="rfvThang" runat="server" ControlToValidate="ddlThang" ErrorMessage="Chưa chọn tháng" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
                     <asp:DropDownList ID="ddlNam" runat="server" CssClass="form-select">
                     </asp:DropDownList>
+                       <asp:RequiredFieldValidator ID="rfvNam" runat="server" ControlToValidate="ddlNam" ErrorMessage="Chưa chọn năm sinh" ForeColor="#FF3300">(*)</asp:RequiredFieldValidator>
                   </div>
                     </td>
             </tr>
@@ -96,12 +100,14 @@
                 <td class="auto-style4">Email</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email khong hợp lệ" ValidationExpression="Internet Email" ForeColor="#FF3300">(*)</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4">Thu nhập</td>
                 <td class="auto-style5">
                     <asp:TextBox ID="txtThuNhap" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtThuNhap" ErrorMessage="Thu nhập từ 1tr đến 50tr" MaximumValue="50000000" MinimumValue="1000000" Type="Integer" ForeColor="#FF3300">(*)</asp:RangeValidator>
                 </td>
             </tr>
             <tr>

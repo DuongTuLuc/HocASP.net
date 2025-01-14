@@ -42,6 +42,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTenDN;
 
         /// <summary>
+        /// revTenDN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revTenDN;
+
+        /// <summary>
         /// lbThongTin control.
         /// </summary>
         /// <remarks>
@@ -132,6 +141,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.DropDownList ddlNgay;
 
         /// <summary>
+        /// rfvNgay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNgay;
+
+        /// <summary>
         /// ddlThang control.
         /// </summary>
         /// <remarks>
@@ -139,6 +157,15 @@ namespace Lab01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlThang;
+
+        /// <summary>
+        /// rfvThang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvThang;
 
         /// <summary>
         /// ddlNam control.
@@ -150,6 +177,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.DropDownList ddlNam;
 
         /// <summary>
+        /// rfvNam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNam;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -159,6 +195,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
+
+        /// <summary>
         /// txtThuNhap control.
         /// </summary>
         /// <remarks>
@@ -166,6 +211,15 @@ namespace Lab01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtThuNhap;
+
+        /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
 
         /// <summary>
         /// ckGioiTinh control.
