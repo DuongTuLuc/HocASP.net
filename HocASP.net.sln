@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34031.81
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab01", "Lab01\Lab01.csproj", "{03428776-AB37-4881-B69D-E6D9088F7A84}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebQLDaoTao", "WebQLDaoTao\WebQLDaoTao.csproj", "{CF280D70-1543-4B30-8C2F-A9A479A9C65E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{03428776-AB37-4881-B69D-E6D9088F7A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03428776-AB37-4881-B69D-E6D9088F7A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03428776-AB37-4881-B69D-E6D9088F7A84}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CF280D70-1543-4B30-8C2F-A9A479A9C65E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CF280D70-1543-4B30-8C2F-A9A479A9C65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CF280D70-1543-4B30-8C2F-A9A479A9C65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CF280D70-1543-4B30-8C2F-A9A479A9C65E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
