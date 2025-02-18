@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="QLMonhoc.aspx.cs" Inherits="WebQLDaoTao.QLMonhoc" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="Contents/pagination.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main" runat="server">
     <p>Trang Quản lý môn học</p>
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Thêm môn học</button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Thêm môn học</button>
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -47,7 +48,7 @@
             OnRowCancelingEdit="gvMonHoc_RowCancelingEdit"
             OnRowUpdating="gvMonHoc_RowUpdating"
             OnRowDeleting="gvMonHoc_RowDeleting"
-            DataKeyNames="MaMH">
+            DataKeyNames="MaMH" OnPageIndexChanging="gvMonHoc_PageIndexChanging" AllowPaging="true" PageSize="5">
             <Columns>
                 <asp:BoundField DataField="MaMH" HeaderText="Mã môn học" ReadOnly="true" />
                 <asp:BoundField DataField="TenMH" HeaderText="Tên môn học" />
@@ -55,7 +56,9 @@
                 <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa"
                     ShowDeleteButton="true" DeleteText="Xóa" />
             </Columns>
+            
             <HeaderStyle BackColor="#003399" ForeColor="#ffffff" />
+            <PagerStyle CssClass="pagination-ys" HorizontalAlign="Center" />
         </asp:GridView>
     </div>
 </asp:Content>

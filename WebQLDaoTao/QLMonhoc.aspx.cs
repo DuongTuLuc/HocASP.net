@@ -41,13 +41,21 @@ namespace WebQLDaoTao
 
         protected void gvMonHoc_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            //b1. lấy thông tin môn học
-            //b1.1 lấy thông tin dòng hiện hành
+            //Cập nhật thông tin vào database
+            //b1. Lấy thông tin môn học dòng hiện hành
             string mamh = gvMonHoc.DataKeys[e.RowIndex].Value.ToString();
             string tenmh = ((TextBox)gvMonHoc.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             int sotiet = int.Parse(((TextBox)gvMonHoc.Rows[e.RowIndex].Cells[2].Controls[0]).Text);
-            //b1.2 gọi phương thức cập nhật của lớp DAO
-            //b2 chuyển trạng thái từ edit sang ReadOnly
+
+            MonHoc mh = new MonHoc()
+            {
+                MaMH = mamh,
+                TenMH = tenmh,
+                SoTiet = sotiet
+            };
+            //b2. Gọi phương thức cập nhật
+            mhDAO.Update(mh);
+            //chuyển trạng thái từ sửa sang xem
             gvMonHoc.EditIndex = -1;
             LienKetDuLieu();
         }
@@ -77,6 +85,12 @@ namespace WebQLDaoTao
             //Gọi phương thức thêm mới
             mhDAO.Insert(mh);
             //load lại dữ liệu
+            LienKetDuLieu();
+        }
+
+        protected void gvMonHoc_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvMonHoc.PageIndex = e.NewPageIndex;
             LienKetDuLieu();
         }
     }
