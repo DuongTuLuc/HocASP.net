@@ -53,7 +53,7 @@
                 <asp:BoundField DataField="MaMH" HeaderText="Mã môn học" ReadOnly="true" />
                 <asp:BoundField DataField="TenMH" HeaderText="Tên môn học" />
                 <asp:BoundField DataField="SoTiet" HeaderText="Số tiết" />
-                <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa"
+                <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa" HeaderText="Chọn tác vụ"
                     ShowDeleteButton="true" DeleteText="Xóa" />
             </Columns>
             
