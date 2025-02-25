@@ -36,15 +36,14 @@
             </div>
         </div>
     </div>
-     <asp:GridView ID="gvKhoa" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-hover" DataSourceID="odsKhoa"
+     <asp:GridView ID="gvKhoa" runat="server" AutoGenerateColumns="False" CssClass="table table-border table-hover" DataSourceID="odsKhoa"
          AllowPaging="True" PageSize="5" DataKeyNames="MaKH">
          <Columns>
-             <asp:BoundField DataField="MaKH" HeaderText="Mã khoa" ReadOnly="true" SortExpression="MaKH"/>
-             <asp:BoundField DataField="TenKh" HeaderText="Tên khoa" SortExpression="TenKh" />
-             <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa" HeaderText="Chọn tác vụ"
+             <asp:BoundField DataField="MaKH" HeaderText="MaKH" ReadOnly="true" SortExpression="MaKH"/>
+             <asp:BoundField DataField="TenKh" HeaderText="TenKh" SortExpression="TenKh" />
+             <asp:CommandField ShowEditButton="true" ButtonType="Button" EditText="Sửa"
                     ShowDeleteButton="true" DeleteText="Xóa" />
          </Columns>
-          <HeaderStyle BackColor="#003399" ForeColor="#ffffff" />
          <PagerStyle CssClass="pagination-ys" HorizontalAlign="Center" />
     </asp:GridView>
     <asp:ObjectDataSource ID="odsKhoa" runat="server"
