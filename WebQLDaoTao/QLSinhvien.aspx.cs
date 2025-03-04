@@ -39,6 +39,7 @@ namespace WebQLDaoTao
                 MaKH = makh
             };
             svDAO.Insert(sv);
+            gvSinhVien.DataBind();
         }
     }
 }

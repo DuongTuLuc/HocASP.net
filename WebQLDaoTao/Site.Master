@@ -63,7 +63,7 @@
         </nav>
 
 
-        <div class="container" style="min-height: 500px">
+        <div class="container-fluid" style="min-height: 500px">
             <div class="row">
                 <div class="col-md-3">
                     <div class="list-group">
@@ -74,7 +74,7 @@
                         <a href="QLKhoa.aspx" class="list-group-item"><span class="glyphicon glyphicon-book"></span>Quản lý khoa</a>
 
                         <a href="QLSinhVien.aspx" class="list-group-item"><span class="glyphicon glyphicon-user"></span>Quản lý sinh viên</a>
-                        <a href="#" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>Quản lý điểm</a>
+                        <a href="NhapDiem.aspx" class="list-group-item"><span class="glyphicon glyphicon-pencil"></span>Quản lý điểm</a>
                     </div>
                 </div>
 

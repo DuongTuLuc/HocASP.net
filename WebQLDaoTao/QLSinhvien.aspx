@@ -84,11 +84,34 @@
             <asp:BoundField DataField="TenSV" HeaderText="Tên SV"  ControlStyle-Width="80px">
 <ControlStyle Width="80px"></ControlStyle>
             </asp:BoundField>
-            <asp:CheckBoxField DataField="GioiTinh" HeaderText="Giới tính" />
+
+            <asp:TemplateField HeaderText="Phái">
+                <ItemTemplate>
+                    <%# Convert.ToBoolean(Eval("gioitinh"))? "Nam": "Nữ"  %>
+                </ItemTemplate>
+                <EditItemTemplate>
+                     <asp:CheckBox ID="ckPhai" runat="server" Checked='<%# Bind("gioitinh") %>' />                                   
+                  <%--  <asp:DropDownList ID="ddlPhai" runat="server" SelectedValue='<%# Bind("gioitinh") %>'>
+                        <asp:ListItem Text="Nam" Value="true"></asp:ListItem>
+                        <asp:ListItem Text="Nữ" Value="false"></asp:ListItem>
+                    </asp:DropDownList>--%>
+                </EditItemTemplate>
+            </asp:TemplateField>
+
+
             <asp:BoundField DataField="NgaySinh" HeaderText="Ngày sinh"  DataFormatString="{0:dd/MM/yyyy}" />
             <asp:BoundField DataField="NoiSinh" HeaderText="Nơi sinh" />
             <asp:BoundField DataField="DiaChi" HeaderText="Địa chỉ"  />
-            <asp:BoundField DataField="MaKH" HeaderText="Mã khoa" />
+           
+            <asp:TemplateField HeaderText="Khoa">
+                <ItemTemplate>
+                <%# Eval("Makh")  %>
+                </ItemTemplate>
+                <EditItemTemplate>
+                    <asp:DropDownList ID="ddlMaKhoa" runat="server" DataSourceID="odsKhoa" 
+                       DataTextField="tenkh" DataValueField="makh" SelectedValue='<%# Bind("makh") %>' ></asp:DropDownList>
+                </EditItemTemplate>
+            </asp:TemplateField>
             <asp:CommandField ShowEditButton="true" ShowDeleteButton="true" ButtonType="Button"
                 EditText="Sửa" DeleteText="Xoá" UpdateText="Ghi" CancelText="Không" ItemStyle-Wrap="false"/>
         </Columns>
